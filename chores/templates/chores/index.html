@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block primary %}
+
+<h3> Your currently stored chorelists are: </h3>
+{% if chorelists %}
+    <ul>
+        {% for chorelist in chorelists%}
+            <li><a href = "/chores/{{chorelist.id}}/">{{chorelist.name}}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No Chorelists are available</p>
+{% endif %}
+
+<a href="/chores/newlist">Create a new list</a>
+{% endblock %}

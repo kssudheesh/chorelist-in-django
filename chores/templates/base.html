@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>My Chores App</title>
+    
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  </head>
+
+  <body>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div>
+      <ul class="nav navbar-nav">
+	<li><a class="navbar-brand" href="#">My Chores App</a></li>	
+        <li><a href="/chores">Home</a></li>
+    </ul>
+    </div>
+  </div>
+  </nav>
+
+    
+   <div class="row-fluid" align=center>
+     <div class="span7 offset2">
+      {% block primary %}{% endblock %}
+     </div> 
+   </div>
+
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block primary %}
+<h1>New Chore</h1>
+<form action="/chores/{{chorelist.id}}/newchore/" method="post">
+    {% csrf_token %}
+    <input id="chorelist" type="hidden" name="chorelist" value="{{ chorelist.id }}">
+    <label for="name"> List Name</label>
+    <input type="textbox" name="name" id="name" placeholder="Enter a name" /><br/><br/>
+    <label for="duedate">Due Date</label>
+    <input type="datetime-local" name="duedate" id="duedate"/><br/><br/>
+    <label for="complete">Completed</label>
+    <input type="checkbox" name="complete" id="complete"/><br/><br/>
+    <input type="submit" value="Create"/>
+{% endblock %}
